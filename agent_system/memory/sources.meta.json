@@ -1,0 +1,402 @@
+[
+  {
+    "query": "deep",
+    "papers": [
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2301.00942v1",
+        "title": "Deep Learning and Computational Physics (Lecture Notes)",
+        "authors": [
+          "Deep Ray",
+          "Orazio Pinti",
+          "Assad A. Oberai"
+        ],
+        "published": "2023-01-03T03:56:19Z",
+        "text": "These notes were compiled as lecture notes for a course developed and taught at the University of the Southern California. They should be accessible to a typical engineering graduate student with a strong background in Applied Mathematics.\n  The main objective of these notes is to introduce a student who is familiar with concepts in linear algebra and partial differential equations to select topics in deep learning. These lecture notes exploit the strong connections between deep learning algorithms and the more conventional techniques of computational physics to achieve two goals. First, they use concepts from computational physics to develop an understanding of deep learning algorithms. Not surprisingly, many concepts in deep learning can be connected to similar concepts in computational physics, and one can utilize this connection to better understand these algorithms. Second, several novel deep learning algorithms can be used to solve challenging problems in computational physics. Thus, they offer someone who is interested in modeling a physical phenomena with a complementary set of tools."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2107.09957v2",
+        "title": "Memorization in Deep Neural Networks: Does the Loss Function matter?",
+        "authors": [
+          "Deep Patel",
+          "P. S. Sastry"
+        ],
+        "published": "2021-07-21T09:08:51Z",
+        "text": "Deep Neural Networks, often owing to the overparameterization, are shown to be capable of exactly memorizing even randomly labelled data. Empirical studies have also shown that none of the standard regularization techniques mitigate such overfitting. We investigate whether the choice of the loss function can affect this memorization. We empirically show, with benchmark data sets MNIST and CIFAR-10, that a symmetric loss function, as opposed to either cross-entropy or squared error loss, results in significant improvement in the ability of the network to resist such overfitting. We then provide a formal definition for robustness to memorization and provide a theoretical explanation as to why the symmetric losses provide this robustness. Our results clearly bring out the role loss functions alone can play in this phenomenon of memorization."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/1912.06732v2",
+        "title": "On the approximation of rough functions with deep neural networks",
+        "authors": [
+          "Tim De Ryck",
+          "Siddhartha Mishra",
+          "Deep Ray"
+        ],
+        "published": "2019-12-13T22:48:36Z",
+        "text": "Deep neural networks and the ENO procedure are both efficient frameworks for approximating rough functions. We prove that at any order, the ENO interpolation procedure can be cast as a deep ReLU neural network. This surprising fact enables the transfer of several desirable properties of the ENO procedure to deep neural networks, including its high-order accuracy at approximating Lipschitz functions. Numerical tests for the resulting neural networks show excellent performance for approximating solutions of nonlinear conservation laws and at data compression."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2306.11113v2",
+        "title": "Learn to Accumulate Evidence from All Training Samples: Theory and Practice",
+        "authors": [
+          "Deep Pandey",
+          "Qi Yu"
+        ],
+        "published": "2023-06-19T18:27:12Z",
+        "text": "Evidential deep learning, built upon belief theory and subjective logic, offers a principled and computationally efficient way to turn a deterministic neural network uncertainty-aware. The resultant evidential models can quantify fine-grained uncertainty using the learned evidence. To ensure theoretically sound evidential models, the evidence needs to be non-negative, which requires special activation functions for model training and inference. This constraint often leads to inferior predictive performance compared to standard softmax models, making it challenging to extend them to many large-scale datasets. To unveil the real cause of this undesired behavior, we theoretically investigate evidential models and identify a fundamental limitation that explains the inferior performance: existing evidential activation functions create zero evidence regions, which prevent the model to learn from training samples falling into such regions. A deeper analysis of evidential activation functions based on our theoretical underpinning inspires the design of a novel regularizer that effectively alleviates this fundamental limitation. Extensive experiments over many challenging real-world datasets and settings confirm our theoretical findings and demonstrate the effectiveness of our proposed approach."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2012.06469v1",
+        "title": "DILIE: Deep Internal Learning for Image Enhancement",
+        "authors": [
+          "Indra Deep Mastan",
+          "Shanmuganathan Raman"
+        ],
+        "published": "2020-12-11T16:39:44Z",
+        "text": "We consider the generic deep image enhancement problem where an input image is transformed into a perceptually better-looking image. Recent methods for image enhancement consider the problem by performing style transfer and image restoration. The methods mostly fall into two categories: training data-based and training data-independent (deep internal learning methods). We perform image enhancement in the deep internal learning framework. Our Deep Internal Learning for Image Enhancement framework enhances content features and style features and uses contextual content loss for preserving image context in the enhanced image. We show results on both hazy and noisy image enhancement. To validate the results, we use structure similarity and perceptual error, which is efficient in measuring the unrealistic deformation present in the images. We show that the proposed framework outperforms the relevant state-of-the-art works for image enhancement."
+      }
+    ],
+    "ts": 1766094037
+  },
+  {
+    "query": "deep",
+    "papers": [
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2301.00942v1",
+        "title": "Deep Learning and Computational Physics (Lecture Notes)",
+        "authors": [
+          "Deep Ray",
+          "Orazio Pinti",
+          "Assad A. Oberai"
+        ],
+        "published": "2023-01-03T03:56:19Z",
+        "text": "These notes were compiled as lecture notes for a course developed and taught at the University of the Southern California. They should be accessible to a typical engineering graduate student with a strong background in Applied Mathematics.\n  The main objective of these notes is to introduce a student who is familiar with concepts in linear algebra and partial differential equations to select topics in deep learning. These lecture notes exploit the strong connections between deep learning algorithms and the more conventional techniques of computational physics to achieve two goals. First, they use concepts from computational physics to develop an understanding of deep learning algorithms. Not surprisingly, many concepts in deep learning can be connected to similar concepts in computational physics, and one can utilize this connection to better understand these algorithms. Second, several novel deep learning algorithms can be used to solve challenging problems in computational physics. Thus, they offer someone who is interested in modeling a physical phenomena with a complementary set of tools."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2107.09957v2",
+        "title": "Memorization in Deep Neural Networks: Does the Loss Function matter?",
+        "authors": [
+          "Deep Patel",
+          "P. S. Sastry"
+        ],
+        "published": "2021-07-21T09:08:51Z",
+        "text": "Deep Neural Networks, often owing to the overparameterization, are shown to be capable of exactly memorizing even randomly labelled data. Empirical studies have also shown that none of the standard regularization techniques mitigate such overfitting. We investigate whether the choice of the loss function can affect this memorization. We empirically show, with benchmark data sets MNIST and CIFAR-10, that a symmetric loss function, as opposed to either cross-entropy or squared error loss, results in significant improvement in the ability of the network to resist such overfitting. We then provide a formal definition for robustness to memorization and provide a theoretical explanation as to why the symmetric losses provide this robustness. Our results clearly bring out the role loss functions alone can play in this phenomenon of memorization."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/1912.06732v2",
+        "title": "On the approximation of rough functions with deep neural networks",
+        "authors": [
+          "Tim De Ryck",
+          "Siddhartha Mishra",
+          "Deep Ray"
+        ],
+        "published": "2019-12-13T22:48:36Z",
+        "text": "Deep neural networks and the ENO procedure are both efficient frameworks for approximating rough functions. We prove that at any order, the ENO interpolation procedure can be cast as a deep ReLU neural network. This surprising fact enables the transfer of several desirable properties of the ENO procedure to deep neural networks, including its high-order accuracy at approximating Lipschitz functions. Numerical tests for the resulting neural networks show excellent performance for approximating solutions of nonlinear conservation laws and at data compression."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2306.11113v2",
+        "title": "Learn to Accumulate Evidence from All Training Samples: Theory and Practice",
+        "authors": [
+          "Deep Pandey",
+          "Qi Yu"
+        ],
+        "published": "2023-06-19T18:27:12Z",
+        "text": "Evidential deep learning, built upon belief theory and subjective logic, offers a principled and computationally efficient way to turn a deterministic neural network uncertainty-aware. The resultant evidential models can quantify fine-grained uncertainty using the learned evidence. To ensure theoretically sound evidential models, the evidence needs to be non-negative, which requires special activation functions for model training and inference. This constraint often leads to inferior predictive performance compared to standard softmax models, making it challenging to extend them to many large-scale datasets. To unveil the real cause of this undesired behavior, we theoretically investigate evidential models and identify a fundamental limitation that explains the inferior performance: existing evidential activation functions create zero evidence regions, which prevent the model to learn from training samples falling into such regions. A deeper analysis of evidential activation functions based on our theoretical underpinning inspires the design of a novel regularizer that effectively alleviates this fundamental limitation. Extensive experiments over many challenging real-world datasets and settings confirm our theoretical findings and demonstrate the effectiveness of our proposed approach."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2012.06469v1",
+        "title": "DILIE: Deep Internal Learning for Image Enhancement",
+        "authors": [
+          "Indra Deep Mastan",
+          "Shanmuganathan Raman"
+        ],
+        "published": "2020-12-11T16:39:44Z",
+        "text": "We consider the generic deep image enhancement problem where an input image is transformed into a perceptually better-looking image. Recent methods for image enhancement consider the problem by performing style transfer and image restoration. The methods mostly fall into two categories: training data-based and training data-independent (deep internal learning methods). We perform image enhancement in the deep internal learning framework. Our Deep Internal Learning for Image Enhancement framework enhances content features and style features and uses contextual content loss for preserving image context in the enhanced image. We show results on both hazy and noisy image enhancement. To validate the results, we use structure similarity and perceptual error, which is efficient in measuring the unrealistic deformation present in the images. We show that the proposed framework outperforms the relevant state-of-the-art works for image enhancement."
+      }
+    ],
+    "ts": 1766094334
+  },
+  {
+    "query": "deep",
+    "papers": [
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2301.00942v1",
+        "title": "Deep Learning and Computational Physics (Lecture Notes)",
+        "authors": [
+          "Deep Ray",
+          "Orazio Pinti",
+          "Assad A. Oberai"
+        ],
+        "published": "2023-01-03T03:56:19Z",
+        "text": "These notes were compiled as lecture notes for a course developed and taught at the University of the Southern California. They should be accessible to a typical engineering graduate student with a strong background in Applied Mathematics.\n  The main objective of these notes is to introduce a student who is familiar with concepts in linear algebra and partial differential equations to select topics in deep learning. These lecture notes exploit the strong connections between deep learning algorithms and the more conventional techniques of computational physics to achieve two goals. First, they use concepts from computational physics to develop an understanding of deep learning algorithms. Not surprisingly, many concepts in deep learning can be connected to similar concepts in computational physics, and one can utilize this connection to better understand these algorithms. Second, several novel deep learning algorithms can be used to solve challenging problems in computational physics. Thus, they offer someone who is interested in modeling a physical phenomena with a complementary set of tools."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2107.09957v2",
+        "title": "Memorization in Deep Neural Networks: Does the Loss Function matter?",
+        "authors": [
+          "Deep Patel",
+          "P. S. Sastry"
+        ],
+        "published": "2021-07-21T09:08:51Z",
+        "text": "Deep Neural Networks, often owing to the overparameterization, are shown to be capable of exactly memorizing even randomly labelled data. Empirical studies have also shown that none of the standard regularization techniques mitigate such overfitting. We investigate whether the choice of the loss function can affect this memorization. We empirically show, with benchmark data sets MNIST and CIFAR-10, that a symmetric loss function, as opposed to either cross-entropy or squared error loss, results in significant improvement in the ability of the network to resist such overfitting. We then provide a formal definition for robustness to memorization and provide a theoretical explanation as to why the symmetric losses provide this robustness. Our results clearly bring out the role loss functions alone can play in this phenomenon of memorization."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/1912.06732v2",
+        "title": "On the approximation of rough functions with deep neural networks",
+        "authors": [
+          "Tim De Ryck",
+          "Siddhartha Mishra",
+          "Deep Ray"
+        ],
+        "published": "2019-12-13T22:48:36Z",
+        "text": "Deep neural networks and the ENO procedure are both efficient frameworks for approximating rough functions. We prove that at any order, the ENO interpolation procedure can be cast as a deep ReLU neural network. This surprising fact enables the transfer of several desirable properties of the ENO procedure to deep neural networks, including its high-order accuracy at approximating Lipschitz functions. Numerical tests for the resulting neural networks show excellent performance for approximating solutions of nonlinear conservation laws and at data compression."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2306.11113v2",
+        "title": "Learn to Accumulate Evidence from All Training Samples: Theory and Practice",
+        "authors": [
+          "Deep Pandey",
+          "Qi Yu"
+        ],
+        "published": "2023-06-19T18:27:12Z",
+        "text": "Evidential deep learning, built upon belief theory and subjective logic, offers a principled and computationally efficient way to turn a deterministic neural network uncertainty-aware. The resultant evidential models can quantify fine-grained uncertainty using the learned evidence. To ensure theoretically sound evidential models, the evidence needs to be non-negative, which requires special activation functions for model training and inference. This constraint often leads to inferior predictive performance compared to standard softmax models, making it challenging to extend them to many large-scale datasets. To unveil the real cause of this undesired behavior, we theoretically investigate evidential models and identify a fundamental limitation that explains the inferior performance: existing evidential activation functions create zero evidence regions, which prevent the model to learn from training samples falling into such regions. A deeper analysis of evidential activation functions based on our theoretical underpinning inspires the design of a novel regularizer that effectively alleviates this fundamental limitation. Extensive experiments over many challenging real-world datasets and settings confirm our theoretical findings and demonstrate the effectiveness of our proposed approach."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2012.06469v1",
+        "title": "DILIE: Deep Internal Learning for Image Enhancement",
+        "authors": [
+          "Indra Deep Mastan",
+          "Shanmuganathan Raman"
+        ],
+        "published": "2020-12-11T16:39:44Z",
+        "text": "We consider the generic deep image enhancement problem where an input image is transformed into a perceptually better-looking image. Recent methods for image enhancement consider the problem by performing style transfer and image restoration. The methods mostly fall into two categories: training data-based and training data-independent (deep internal learning methods). We perform image enhancement in the deep internal learning framework. Our Deep Internal Learning for Image Enhancement framework enhances content features and style features and uses contextual content loss for preserving image context in the enhanced image. We show results on both hazy and noisy image enhancement. To validate the results, we use structure similarity and perceptual error, which is efficient in measuring the unrealistic deformation present in the images. We show that the proposed framework outperforms the relevant state-of-the-art works for image enhancement."
+      }
+    ],
+    "ts": 1766094350
+  },
+  {
+    "query": "RAG",
+    "papers": [
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2502.13957v2",
+        "title": "RAG-Gym: Systematic Optimization of Language Agents for Retrieval-Augmented Generation",
+        "authors": [
+          "Guangzhi Xiong",
+          "Qiao Jin",
+          "Xiao Wang",
+          "Yin Fang",
+          "Haolin Liu",
+          "Yifan Yang",
+          "Fangyuan Chen",
+          "Zhixing Song",
+          "Dengyu Wang",
+          "Minjia Zhang",
+          "Zhiyong Lu",
+          "Aidong Zhang"
+        ],
+        "published": "2025-02-19T18:56:03Z",
+        "text": "Retrieval-augmented generation (RAG) has shown great promise for knowledge-intensive tasks and recently advanced with agentic RAG, where language agents engage in multi-round interactions with external knowledge sources for adaptive information retrieval. However, existing agentic RAG methods often depend on ad-hoc prompt engineering and lack a unified optimization framework. We introduce RAG-Gym, a comprehensive platform that systematically explores three optimization dimensions: (1) prompt engineering, (2) actor tuning, and (3) critic training. For prompt engineering, we propose Re$^2$Search, a novel agent incorporating reasoning reflection that significantly outperforms standard prompts. In actor tuning, we evaluate three popular post-training algorithms with fine-grained process supervision and identify direct preference optimization as the most effective. We further demonstrate that a trained critic can enhance inference by selecting higher-quality intermediate reasoning steps. Together, these findings lead to the optimized Re$^2$Search++ agent, which surpasses most recent methods like Search-R1 by a relative increase of 3.2% to 11.6% in average F1. Finally, we examine the impact of different reward sources and analyze scaling properties in training and inference, offering practical insights for agentic RAG optimization. The project homepage is available at https://rag-gym.github.io."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2401.15391v1",
+        "title": "MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries",
+        "authors": [
+          "Yixuan Tang",
+          "Yi Yang"
+        ],
+        "published": "2024-01-27T11:41:48Z",
+        "text": "Retrieval-augmented generation (RAG) augments large language models (LLM) by retrieving relevant knowledge, showing promising potential in mitigating LLM hallucinations and enhancing response quality, thereby facilitating the great adoption of LLMs in practice. However, we find that existing RAG systems are inadequate in answering multi-hop queries, which require retrieving and reasoning over multiple pieces of supporting evidence. Furthermore, to our knowledge, no existing RAG benchmarking dataset focuses on multi-hop queries. In this paper, we develop a novel dataset, MultiHop-RAG, which consists of a knowledge base, a large collection of multi-hop queries, their ground-truth answers, and the associated supporting evidence. We detail the procedure of building the dataset, utilizing an English news article dataset as the underlying RAG knowledge base. We demonstrate the benchmarking utility of MultiHop-RAG in two experiments. The first experiment compares different embedding models for retrieving evidence for multi-hop queries. In the second experiment, we examine the capabilities of various state-of-the-art LLMs, including GPT-4, PaLM, and Llama2-70B, in reasoning and answering multi-hop queries given the evidence. Both experiments reveal that existing RAG methods perform unsatisfactorily in retrieving and answering multi-hop queries. We hope MultiHop-RAG will be a valuable resource for the community in developing effective RAG systems, thereby facilitating greater adoption of LLMs in practice. The MultiHop-RAG and implemented RAG system is publicly available at https://github.com/yixuantt/MultiHop-RAG/."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2412.12881v1",
+        "title": "RAG-Star: Enhancing Deliberative Reasoning with Retrieval Augmented Verification and Refinement",
+        "authors": [
+          "Jinhao Jiang",
+          "Jiayi Chen",
+          "Junyi Li",
+          "Ruiyang Ren",
+          "Shijie Wang",
+          "Wayne Xin Zhao",
+          "Yang Song",
+          "Tao Zhang"
+        ],
+        "published": "2024-12-17T13:05:36Z",
+        "text": "Existing large language models (LLMs) show exceptional problem-solving capabilities but might struggle with complex reasoning tasks. Despite the successes of chain-of-thought and tree-based search methods, they mainly depend on the internal knowledge of LLMs to search over intermediate reasoning steps, limited to dealing with simple tasks involving fewer reasoning steps. In this paper, we propose \\textbf{RAG-Star}, a novel RAG approach that integrates the retrieved information to guide the tree-based deliberative reasoning process that relies on the inherent knowledge of LLMs. By leveraging Monte Carlo Tree Search, RAG-Star iteratively plans intermediate sub-queries and answers for reasoning based on the LLM itself. To consolidate internal and external knowledge, we propose an retrieval-augmented verification that utilizes query- and answer-aware reward modeling to provide feedback for the inherent reasoning of LLMs. Our experiments involving Llama-3.1-8B-Instruct and GPT-4o demonstrate that RAG-Star significantly outperforms previous RAG and reasoning methods."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2402.07483v2",
+        "title": "T-RAG: Lessons from the LLM Trenches",
+        "authors": [
+          "Masoomali Fatehkia",
+          "Ji Kim Lucas",
+          "Sanjay Chawla"
+        ],
+        "published": "2024-02-12T08:45:08Z",
+        "text": "Large Language Models (LLM) have shown remarkable language capabilities fueling attempts to integrate them into applications across a wide range of domains. An important application area is question answering over private enterprise documents where the main considerations are data security, which necessitates applications that can be deployed on-prem, limited computational resources and the need for a robust application that correctly responds to queries. Retrieval-Augmented Generation (RAG) has emerged as the most prominent framework for building LLM-based applications. While building a RAG is relatively straightforward, making it robust and a reliable application requires extensive customization and relatively deep knowledge of the application domain. We share our experiences building and deploying an LLM application for question answering over private organizational documents. Our application combines the use of RAG with a finetuned open-source LLM. Additionally, our system, which we call Tree-RAG (T-RAG), uses a tree structure to represent entity hierarchies within the organization. This is used to generate a textual description to augment the context when responding to user queries pertaining to entities within the organization's hierarchy. Our evaluations, including a Needle in a Haystack test, show that this combination performs better than a simple RAG or finetuning implementation. Finally, we share some lessons learned based on our experiences building an LLM application for real-world use."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2504.01346v4",
+        "title": "RAG over Tables: Hierarchical Memory Index, Multi-Stage Retrieval, and Benchmarking",
+        "authors": [
+          "Jiaru Zou",
+          "Dongqi Fu",
+          "Sirui Chen",
+          "Xinrui He",
+          "Zihao Li",
+          "Yada Zhu",
+          "Jiawei Han",
+          "Jingrui He"
+        ],
+        "published": "2025-04-02T04:24:41Z",
+        "text": "Retrieval-Augmented Generation (RAG) enhances Large Language Models (LLMs) by integrating them with an external knowledge base to improve the answer relevance and accuracy. In real-world scenarios, beyond pure text, a substantial amount of knowledge is stored in tables, and user questions often require retrieving answers that are distributed across multiple tables. Retrieving knowledge from a table corpora (i.e., various individual tables) for a question remains nascent, at least, for (i) how to understand intra- and inter-table knowledge effectively, (ii) how to filter unnecessary tables and how to retrieve the most relevant tables efficiently, (iii) how to prompt LLMs to infer over the retrieval, (iv) how to evaluate the corresponding performance in a realistic setting. Facing the above challenges, in this paper, we first propose a table-corpora-aware RAG framework, named T-RAG, which consists of the hierarchical memory index, multi-stage retrieval, and graph-aware prompting for effective and efficient table knowledge retrieval and inference. Further, we first develop a multi-table question answering benchmark named MultiTableQA, which spans 3 different task types, 57,193 tables, and 23,758 questions in total, and the sources are all from real-world scenarios. Based on MultiTableQA, we did the holistic comparison over table retrieval methods, RAG methods, and table-to-graph representation learning methods, where T-RAG shows the leading accuracy, recall, and running time performance. Also, under T-RAG, we evaluate the inference ability upgrade of different LLMs. Code and Data are available at https://github.com/jiaruzouu/T-RAG"
+      }
+    ],
+    "ts": 1766095215
+  },
+  {
+    "query": "tf idf",
+    "papers": [
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2209.14281v2",
+        "title": "Multilingual Search with Subword TF-IDF",
+        "authors": [
+          "Artit Wangperawong"
+        ],
+        "published": "2022-09-28T17:49:37Z",
+        "text": "Multilingual search can be achieved with subword tokenization. The accuracy of traditional TF-IDF approaches depend on manually curated tokenization, stop words and stemming rules, whereas subword TF-IDF (STF-IDF) can offer higher accuracy without such heuristics. Moreover, multilingual support can be incorporated inherently as part of the subword tokenization model training. XQuAD evaluation demonstrates the advantages of STF-IDF: superior information retrieval accuracy of 85.4% for English and over 80% for 10 other languages without any heuristics-based preprocessing. The software to reproduce these results are open-sourced as a part of Text2Text: https://github.com/artitw/text2text"
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2507.15742v2",
+        "title": "A Fisher's exact test justification of the TF-IDF term-weighting scheme",
+        "authors": [
+          "Paul Sheridan",
+          "Zeyad Ahmed",
+          "Aitazaz A. Farooque"
+        ],
+        "published": "2025-07-21T15:54:23Z",
+        "text": "Term frequency-inverse document frequency, or TF-IDF for short, is arguably the most celebrated mathematical expression in the history of information retrieval. Conceived as a simple heuristic quantifying the extent to which a given term's occurrences are concentrated in any one given document out of many, TF-IDF and its many variants are routinely used as term-weighting schemes in diverse text analysis applications. There is a growing body of scholarship dedicated to placing TF-IDF on a sound theoretical foundation. Building on that tradition, this paper justifies the use of TF-IDF to the statistics community by demonstrating how the famed expression can be understood from a significance testing perspective. We show that the common TF-IDF variant TF-ICF is, under mild regularity conditions, closely related to the negative logarithm of the $p$-value from a one-tailed version of Fisher's exact test of statistical significance. As a corollary, we establish a connection between TF-IDF and the said negative log-transformed $p$-value under certain idealized assumptions. We further demonstrate, as a limiting case, that this same quantity converges to TF-IDF in the limit of an infinitely large document collection. The Fisher's exact test justification of TF-IDF equips the working statistician with a ready explanation of the term-weighting scheme's long-established effectiveness."
+      }
+    ],
+    "ts": 1766095641
+  },
+  {
+    "query": "ok",
+    "papers": [
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2401.12202v2",
+        "title": "OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics",
+        "authors": [
+          "Peiqi Liu",
+          "Yaswanth Orru",
+          "Jay Vakil",
+          "Chris Paxton",
+          "Nur Muhammad Mahi Shafiullah",
+          "Lerrel Pinto"
+        ],
+        "published": "2024-01-22T18:42:20Z",
+        "text": "Remarkable progress has been made in recent years in the fields of vision, language, and robotics. We now have vision models capable of recognizing objects based on language queries, navigation systems that can effectively control mobile systems, and grasping models that can handle a wide range of objects. Despite these advancements, general-purpose applications of robotics still lag behind, even though they rely on these fundamental capabilities of recognition, navigation, and grasping. In this paper, we adopt a systems-first approach to develop a new Open Knowledge-based robotics framework called OK-Robot. By combining Vision-Language Models (VLMs) for object detection, navigation primitives for movement, and grasping primitives for object manipulation, OK-Robot offers a integrated solution for pick-and-drop operations without requiring any training. To evaluate its performance, we run OK-Robot in 10 real-world home environments. The results demonstrate that OK-Robot achieves a 58.5% success rate in open-ended pick-and-drop tasks, representing a new state-of-the-art in Open Vocabulary Mobile Manipulation (OVMM) with nearly 1.8x the performance of prior work. On cleaner, uncluttered environments, OK-Robot's performance increases to 82%. However, the most important insight gained from OK-Robot is the critical role of nuanced details when combining Open Knowledge systems like VLMs with robotic modules. Videos of our experiments and code are available on our website: https://ok-robot.github.io"
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2307.13900v1",
+        "title": "FinTree: Financial Dataset Pretrain Transformer Encoder for Relation Extraction",
+        "authors": [
+          "Hyunjong Ok"
+        ],
+        "published": "2023-07-26T01:48:52Z",
+        "text": "We present FinTree, Financial Dataset Pretrain Transformer Encoder for Relation Extraction. Utilizing an encoder language model, we further pretrain FinTree on the financial dataset, adapting the model in financial domain tasks. FinTree stands out with its novel structure that predicts a masked token instead of the conventional [CLS] token, inspired by the Pattern Exploiting Training methodology. This structure allows for more accurate relation predictions between two given entities. The model is trained with a unique input pattern to provide contextual and positional information about the entities of interest, and a post-processing step ensures accurate predictions in line with the entity types. Our experiments demonstrate that FinTree outperforms on the REFinD, a large-scale financial relation extraction dataset. The code and pretrained models are available at https://github.com/HJ-Ok/FinTree."
+      }
+    ],
+    "ts": 1766096196
+  },
+  {
+    "query": "Objasni mi vektorsku bazu",
+    "papers": [
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2506.16466v1",
+        "title": "Compressibility measurement of the thermal MI--BG transition in an optical lattice",
+        "authors": [
+          "Phil Russ",
+          "Mi Yan",
+          "Nicholas Kowalski",
+          "Laura Wadleigh",
+          "Vito W. Scarola",
+          "Brian DeMarco"
+        ],
+        "published": "2025-06-19T17:04:19Z",
+        "text": "Disorder can be applied to transform conducting to insulating states by localizing individual quantum particles. The interplay between disorder and interactions in many-particle systems leads to a richer tapestry of quantum phase transitions. Here, we report the measurement in an ultracold lattice gas of a disorder-induced transition from a state with small disorder-independent compressibility to a state for which compressibility increases with disorder. At zero temperature this is the transition from a Mott insulator (MI) to a Bose glass (BG), both of which are insulating states. This transformation is observed using measurements of core compressibility. By determining how double occupancy changes with atom number, we identify the threshold disorder strength required to switch from disorder-independent MI-like to disorder-dependent BG-like compressible behavior."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2210.05177v2",
+        "title": "Make Sharpness-Aware Minimization Stronger: A Sparsified Perturbation Approach",
+        "authors": [
+          "Peng Mi",
+          "Li Shen",
+          "Tianhe Ren",
+          "Yiyi Zhou",
+          "Xiaoshuai Sun",
+          "Rongrong Ji",
+          "Dacheng Tao"
+        ],
+        "published": "2022-10-11T06:30:10Z",
+        "text": "Deep neural networks often suffer from poor generalization caused by complex and non-convex loss landscapes. One of the popular solutions is Sharpness-Aware Minimization (SAM), which smooths the loss landscape via minimizing the maximized change of training loss when adding a perturbation to the weight. However, we find the indiscriminate perturbation of SAM on all parameters is suboptimal, which also results in excessive computation, i.e., double the overhead of common optimizers like Stochastic Gradient Descent (SGD). In this paper, we propose an efficient and effective training scheme coined as Sparse SAM (SSAM), which achieves sparse perturbation by a binary mask. To obtain the sparse mask, we provide two solutions which are based onFisher information and dynamic sparse training, respectively. In addition, we theoretically prove that SSAM can converge at the same rate as SAM, i.e., $O(\\log T/\\sqrt{T})$. Sparse SAM not only has the potential for training acceleration but also smooths the loss landscape effectively. Extensive experimental results on CIFAR10, CIFAR100, and ImageNet-1K confirm the superior efficiency of our method to SAM, and the performance is preserved or even better with a perturbation of merely 50% sparsity. Code is availiable at https://github.com/Mi-Peng/Sparse-Sharpness-Aware-Minimization."
+      }
+    ],
+    "ts": 1766096262
+  },
+  {
+    "query": "Gde se koristi RAG?",
+    "papers": [
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2411.19755v4",
+        "title": "Explicit error bounds of the SE and DE formulas for integrals with logarithmic and algebraic singularity",
+        "authors": [
+          "Tomoaki Okayama",
+          "Kosei Arakawa",
+          "Ryo Kamigaki",
+          "Eita Yabumoto"
+        ],
+        "published": "2024-11-29T14:59:52Z",
+        "text": "The single exponential (SE) and double exponential (DE) formulas are widely recognized as efficient quadrature formulas for evaluating integrals with endpoint singularity. For integrals exhibiting algebraic singularity, explicit error bounds in a computable form have been provided, enabling computations with guaranteed accuracy. Such explicit error bounds have also been provided for integrals exhibiting logarithmic singularity. However, these error bounds have two points to be discussed. The first point is on overestimation of divergence speed of logarithmic singularity. The second point is on the case where there exist both logarithmic and algebraic singularity. To address these issues, this study provides new error bounds for integrals with logarithmic and algebraic singularity. Although existing and new error bounds described above pertain to integrals over the finite interval, the SE and DE formulas are also applicable to integrals over the semi-infinite interval. On the basis of the new results, this study provides new error bounds for integrals over the semi-infinite interval with logarithmic and algebraic singularity at the origin."
+      },
+      {
+        "source": "arxiv",
+        "id": "http://arxiv.org/abs/2406.18142v1",
+        "title": "Innovating for Tomorrow: The Convergence of SE and Green AI",
+        "authors": [
+          "Luís Cruz",
+          "Xavier Franch Gutierrez",
+          "Silverio Martínez-Fernández"
+        ],
+        "published": "2024-06-26T07:47:04Z",
+        "text": "The latest advancements in machine learning, specifically in foundation models, are revolutionizing the frontiers of existing software engineering (SE) processes. This is a bi-directional phenomona, where 1) software systems are now challenged to provide AI-enabled features to their users, and 2) AI is used to automate tasks within the software development lifecycle. In an era where sustainability is a pressing societal concern, our community needs to adopt a long-term plan enabling a conscious transformation that aligns with environmental sustainability values. In this paper, we reflect on the impact of adopting environmentally friendly practices to create AI-enabled software systems and make considerations on the environmental impact of using foundation models for software development."
+      }
+    ],
+    "ts": 1766096329
+  }
+]
