@@ -5,7 +5,7 @@ from agents.writer_agent import WriterAgent
 from router import Router
 
 def main():
-    llm = OllamaLLM(model="llama3.2")  
+    llm = OllamaLLM(model="llama3.2")
 
     search = SearchAgent(llm)
     extractor = ExtractorAgent(llm)
@@ -15,7 +15,6 @@ def main():
 
     print("=== Multi-Agent Research Assistant (local Ollama) ===")
     q = input("Unesi temu/pitanje: ").strip()
-    print("POSLE INPUTA", q)
     res = router.run(q)
 
     print("\n=== REZULTAT ===\n")
@@ -28,3 +27,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

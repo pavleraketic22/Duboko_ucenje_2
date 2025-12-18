@@ -16,10 +16,11 @@ class Router:
         }
 
         # dinamička petlja: može da se vraća nazad
-        for step in range(3):  # safety cap
+        for step in range(6):  # safety cap
             # 1) ako nemamo izvore -> search
             if not state["papers"]:
                 s = self.search.run(state["query"], k=2)
+                print("------------PRETRAZUJEM--------------")
                 if not s["ok"]:
                     # Interakcija sa korisnikom (traženo u projektu)
                     reason = s["next"]["reason"]
@@ -36,6 +37,8 @@ class Router:
             # 2) ako nemamo ekstrakcije -> extractor
             if not state["extractions"]:
                 e = self.extractor.run(state["papers"])
+                print("-------------EKSTRAKTUJEM------------------")
+
                 if not e["ok"]:
                     # fallback: nova pretraga
                     state["papers"] = []
@@ -52,6 +55,7 @@ class Router:
 
             # 3) writer
             w = self.writer.run(state["query"], state["extractions"])
+            print("------------PISEM----------------")
             if w["ok"]:
                 return {"ok": True, "text": w["data"]["text"], "sources": w["data"]["sources"], "state": state}
 

@@ -11,7 +11,7 @@ Napiši strukturisan tekst:
 2) Ključni pristupi/metode
 3) Najvažniji nalazi (ako postoje)
 4) Ograničenja i otvorena pitanja
-5) Lista izvora (naslovi)
+5) Lista izvora (naslovi i linkovi)
 """
 
 class WriterAgent:

@@ -34,7 +34,7 @@ def arxiv_search(query: str, max_results: int = 5) -> Dict:
                 "title": title,
                 "authors": authors,
                 "published": published,
-                "text": summary  # za extractor (minimum: abstract)
+                "text": summary
             })
 
         if not entries:
