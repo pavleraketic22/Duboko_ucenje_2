@@ -1,19 +1,24 @@
-from llm_ollama import OllamaLLM
+# main.py
+from agent_system.llm_ollama import OllamaLLM
+from agent_system.runner import Orchestrator
+from agents.query_agent import QueryAgent
 from agents.search_agent import SearchAgent
 from agents.extractor_agent import ExtractorAgent
 from agents.writer_agent import WriterAgent
-from router import Router
 
 def main():
     llm = OllamaLLM(model="llama3.2")
 
-    search = SearchAgent(llm)
-    extractor = ExtractorAgent(llm)
-    writer = WriterAgent(llm)
+    agents = {
+        "query": QueryAgent(llm),
+        "search": SearchAgent(llm),
+        "extractor": ExtractorAgent(llm),
+        "writer": WriterAgent(llm),
+    }
 
-    router = Router(search, extractor, writer)
+    orch = Orchestrator(agents, max_steps=20)
 
-    print("=== Multi-Agent Research Assistant (local Ollama) ===")
+    print("=== Multi-Agent Research Assistant (dynamic handoff, local Ollama) ===")
 
     while True:
         q = input("\nUnesi temu/pitanje (ili 'exit' za kraj): ").strip()
@@ -21,7 +26,7 @@ def main():
             print("Pozdrav!")
             break
 
-        res = router.run(q)
+        res = orch.run(q)
 
         print("\n=== REZULTAT ===\n")
         print(res.get("text", "Nema teksta."))
@@ -30,11 +35,6 @@ def main():
             print("\n=== IZVORI (naslovi) ===")
             for s in res["sources"]:
                 print("-", s)
-
-        action = input("\nŠta dalje? (Enter = novo pitanje, 'exit' = kraj): ").strip().lower()
-        if action in {"exit", "quit", "q"}:
-            print("Pozdrav!")
-            break
 
 if __name__ == "__main__":
     main()

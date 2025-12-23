@@ -1,52 +1,101 @@
-from llm_ollama import OllamaLLM
-from schema import msg
+WRITER_SYSTEM = r"""
+Ti si WRITER agent. Dobijaš STATE sa user_query i extractions.
+Koristi ISKLJUČIVO informacije iz extractions. Ne izmišljaj. Ako nema -> napiši "N/A".
 
-SYSTEM = """Ti si agent za sintezu teksta za naučno istraživanje.
-KORISTI SAMO informacije iz ulaznih ekstrakcija.
-Ako nešto nije prisutno u ekstrakcijama, jasno reci da nije pronađeno.
-Ne izmišljaj citate ili rezultate.
+U data.final_text i next.final VRATI SAMO sledeći tekst (bez ikakvih pravila, objašnjenja ili dodatnog sadržaja):
 
-Napiši strukturisan tekst:
-1) Kratak pregled teme
-2) Ključni pristupi/metode
-3) Najvažniji nalazi (ako postoje)
-4) Ograničenja i otvorena pitanja
-5) Lista izvora (naslovi i linkovi)
+Rutina za analiziranje naučnog rada:
+Ulaz: tekst rada
+Izlaz: kratak strukturisan izveštaj
+
+METAPODACI
+Naslov: ...
+Autori: ...
+Godina: ...
+Oblast: ...
+Izvor/Link: ...
+
+CILJ RADA
+...
+
+METODOLOGIJA
+...
+
+REZULTATI
+...
+
+OGRANIČENJA
+...
+
+DOPRINOS
+...
+
+OTVORENA PITANJA
+...
+
+Vrati ISKLJUČIVO validan JSON envelope:
+{
+  "ok": true,
+  "data": {"final_text": "", "sources": [], "notes": ""},
+  "meta": {"agent": "writer", "confidence": 0.0, "notes": ""},
+  "next": {"action": "DONE", "final": ""}
+}
+
+data.final_text i next.final MORAJU biti identični.
 """
 
+
+
+# agents/writer_agent.py
+from agent_system.validate import safe_json_loads
+from agent_system.schema import envelope
+
 class WriterAgent:
-    def __init__(self, llm: OllamaLLM):
+    name = "writer"
+
+    def __init__(self, llm):
         self.llm = llm
 
-    def run(self, user_query: str, extractions: list):
-        user = f"TEMA: {user_query}\n\nEKSTRAKCIJE:\n{extractions}\n"
-        text = self.llm.generate(f"SYSTEM:\n{SYSTEM}\n\nUSER:\n{user}\n\nASSISTANT:\n", temperature=0.2, max_tokens=900)
+    def run(self, state: dict):
+        prompt = f"SYSTEM:\n{WRITER_SYSTEM}\n\nSTATE:\n{state}\n\nASSISTANT:\n"
+        raw = self.llm.generate(prompt, temperature=0.2, max_tokens=900)
+        js = safe_json_loads(raw)
 
-        # ako je baš prazno, traži još izvora
-        if not text or len(text.strip()) < 30:
-            return msg(
-                "WRITE_RESULT",
-                False,
-                {"text": "", "sources": []},
-                agent="writer",
-                confidence=0.2,
-                notes="Empty synthesis",
-                next={"action": "HANDOFF", "target": "search", "reason": "Need more/better sources."}
-            )
+        # 1) Ako je LLM vratio envelope, ispravi ga
+        if isinstance(js, dict) and "next" in js:
+            data = js.get("data") or {}
+            nxt = js.get("next") or {}
 
-        titles = []
-        for e in extractions:
-            md = e.get("metadata", {})
-            t = md.get("title")
-            if t:
-                titles.append(t)
+            # uzmi final_text ako postoji
+            final_text = (data.get("final_text") or "").strip()
 
-        return msg(
-            "WRITE_RESULT",
+            # 1a) Ako je next.final slučajno JSON string, probaj da ga razložiš
+            nxt_final = nxt.get("final")
+            if isinstance(nxt_final, str) and nxt_final.strip().startswith("{"):
+                nested = safe_json_loads(nxt_final)
+                if isinstance(nested, dict):
+                    nested_text = (((nested.get("data") or {}).get("final_text")) or "").strip()
+                    if nested_text:
+                        final_text = nested_text
+                        js.setdefault("data", {})["final_text"] = final_text
+
+            # 1b) Ako je akcija DONE, final MORA biti plain text
+            if nxt.get("action") == "DONE":
+                if not final_text:
+                    # ako LLM nije dao final_text, fallback na raw (ali raw nije JSON)
+                    final_text = raw.strip()
+                    js.setdefault("data", {})["final_text"] = final_text
+                js["next"]["final"] = final_text
+
+            return js
+
+        # 2) fallback: LLM nije vratio envelope -> DONE sa sirovim tekstom
+        return envelope(
+            "writer",
             True,
-            {"text": text, "sources": titles},
-            agent="writer",
-            confidence=0.75,
-            notes="Synthesis complete",
-            next={"action": "DONE", "target": "router", "reason": "Answer ready."}
+            {"final_text": raw, "sources": state.get("sources", [])},
+            confidence=0.6,
+            notes="fallback",
+            next={"action": "DONE", "final": raw}
         )
+

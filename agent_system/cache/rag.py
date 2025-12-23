@@ -22,7 +22,7 @@ class SourceRAG:
             with open(META_PATH, "r", encoding="utf-8") as f:
                 self.meta = json.load(f)  # list of payloads
         else:
-            self.index = faiss.IndexFlatIP(self.dim)  # cosine-ish uz normalizaciju
+            self.index = faiss.IndexFlatIP(self.dim)
             self.meta = []
 
     def _embed(self, texts):
@@ -30,7 +30,7 @@ class SourceRAG:
         return np.array(vecs).astype("float32")
 
     def add(self, query: str, papers: list[dict]):
-        # Minimalna validacija: papiri moraju imati bar title/url/text
+
         payload = {"query": query, "papers": papers, "ts": int(time.time())}
         vec = self._embed([query])
 

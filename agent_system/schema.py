@@ -1,16 +1,12 @@
-from typing import Dict, Any
+# agent_system/schema.py
+from typing import Dict, Any, Optional
 
-def msg(type: str, ok: bool, data: Dict[str, Any], agent: str, confidence: float = 0.5, notes: str = "", next=None):
+def envelope(agent: str, ok: bool, data: Dict[str, Any], confidence: float = 0.5, notes: str = "", next: Optional[Dict[str, Any]] = None):
     if next is None:
-        next = {"action": "HANDOFF", "target": "router", "reason": ""}
+        next = {"action": "DONE", "final": ""}
     return {
-        "type": type,
         "ok": ok,
         "data": data,
-        "meta": {
-            "agent": agent,
-            "confidence": confidence,
-            "notes": notes,
-        },
+        "meta": {"agent": agent, "confidence": confidence, "notes": notes},
         "next": next
     }
