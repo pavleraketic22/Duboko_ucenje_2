@@ -2,13 +2,13 @@ from agent_system.llm_ollama import OllamaLLM
 from agents.search_agent import SearchAgent
 
 def main():
-    # 1) inicijalizuj LLM (isti kao u projektu)
+
     llm = OllamaLLM(model="llama3.2")
 
-    # 2) inicijalizuj search agenta
+
     search_agent = SearchAgent(llm)
 
-    # 3) test upit
+
     query = "TF-IDF text classification"
 
     print("=== TEST SEARCH AGENTA ===")

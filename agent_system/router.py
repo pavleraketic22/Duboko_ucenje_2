@@ -13,15 +13,15 @@ class Router:
         rag = SourceRAG()
         state = {"query": user_query, "papers": [], "extractions": []}
 
-        for step in range(12):  # ✅ safety cap
-            # 0) Ako nemamo papers, probaj RAG
+        for step in range(12):
+
             if not state["papers"]:
-                hit = rag.get(state["query"], threshold=0.8)  # ✅ u petlji
+                hit = rag.get(state["query"], threshold=0.8)
                 if hit:
                     print(f"[Router] RAG HIT (score={hit['score']:.2f}) -> preskačem Search")
                     state["papers"] = hit["papers"]
 
-            # 1) Ako i dalje nemamo papers, radi Search
+
             if not state["papers"]:
                 print("------------PRETRAZUJEM--------------")
                 s = self.search.run(state["query"], k=2)
@@ -35,10 +35,10 @@ class Router:
                     continue
 
                 state["papers"] = s["data"]["papers"]
-                rag.add(state["query"], state["papers"])  # ✅ upis samo posle search-a
+                rag.add(state["query"], state["papers"])
                 continue
 
-            # 2) Extractor
+
             if not state["extractions"]:
                 print("-------------EKSTRAKTUJEM------------------")
                 e = self.extractor.run(state["papers"])
@@ -50,13 +50,13 @@ class Router:
                 state["extractions"] = e["data"]["extractions"]
                 continue
 
-            # 3) Writer
+
             print("------------PISEM----------------")
             w = self.writer.run(state["query"], state["extractions"])
             if w["ok"]:
                 return {"ok": True, "text": w["data"]["text"], "sources": w["data"]["sources"], "state": state}
 
-            # Ako writer nije ok, resetuj i probaj opet
+
             state["papers"] = []
             state["extractions"] = []
 
